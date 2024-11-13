@@ -13,14 +13,41 @@ const products = [
 ];
 
 const productList = document.getElementById('product-list');
+const productSelect = document.getElementById('product-select');
 
-products.forEach(product => {
-    const productDiv = document.createElement('div');
-    productDiv.classList.add('product');
-    productDiv.innerHTML = `
-        <h2>${product.name}</h2>
-        <p>${product.description}</p>
-        <p><strong>Especificações:</strong> ${product.specifications}</p>
-    `;
-    productList.appendChild(productDiv);
+// Função para exibir produtos na página
+function displayProducts(filter = "") {
+    productList.innerHTML = ""; // Limpa a lista de produtos exibidos
+
+    products.forEach(product => {
+        if (filter === "" || product.name === filter) {
+            const productDiv = document.createElement('div');
+            productDiv.classList.add('product');
+            productDiv.innerHTML = `
+                <h2>${product.name}</h2>
+                <p>${product.description}</p>
+                <p><strong>Especificações:</strong> ${product.specifications}</p>
+            `;
+            productList.appendChild(productDiv);
+        }
+    });
+}
+
+// Função para preencher a caixa de seleção com os produtos
+function populateSelect() {
+    products.forEach(product => {
+        const option = document.createElement('option');
+        option.value = product.name;
+        option.textContent = product.name;
+        productSelect.appendChild(option);
+    });
+}
+
+// Evento para mudar a exibição dos produtos quando a seleção muda
+productSelect.addEventListener('change', (event) => {
+    displayProducts(event.target.value);
 });
+
+// Inicialização
+populateSelect();
+displayProducts();
