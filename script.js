@@ -9,7 +9,7 @@ const products = [
         name: "Poltrona Bergamota",
         description: "Design exclusivo de Samuca.",
         specifications: "Parte da coleção 'Além da Superfície'.",
-        image: "images/poltrona-bergamota.jpg" // Caminho da imagem
+        image: "poltrona-bergamota.jpg" // Caminho da imagem
     }
     // Adicione mais produtos com imagens aqui
 ];
