@@ -66,10 +66,16 @@ strong {
 }
 
 .product-image {
-    width: 100%;
+    width: 50%; /* A imagem começa com 50% do tamanho */
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
+    transition: width 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom */
+}
+
+/* Efeito de zoom quando o usuário passa o mouse sobre a imagem */
+.product-image:hover {
+    width: 100%; /* A imagem vai para 100% do tamanho ao passar o mouse */
 }
 
 /* Para melhorar a legibilidade */
