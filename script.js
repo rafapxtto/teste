@@ -20,7 +20,7 @@ function displayProducts(filter = "") {
     productList.innerHTML = ""; // Limpa a lista de produtos exibidos
 
     products.forEach(product => {
-        if (filter === "" || product.name === filter) {
+        if (product.name === filter) {
             const productDiv = document.createElement('div');
             productDiv.classList.add('product');
             productDiv.innerHTML = `
@@ -50,4 +50,3 @@ productSelect.addEventListener('change', (event) => {
 
 // Inicialização
 populateSelect();
-displayProducts();
