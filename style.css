@@ -46,7 +46,7 @@ label {
 }
 
 .product:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente o produto ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .product h2 {
@@ -63,6 +63,13 @@ label {
 strong {
     font-weight: bold;
     color: #333;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 /* Para melhorar a legibilidade */
