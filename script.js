@@ -3,13 +3,13 @@ const products = [
         name: "Poltrona Madri",
         description: "Mecanismo swivel glider power com 2 motores independentes.",
         specifications: "Possui balanço e giro.",
-        image: "images/poltrona-madri.jpg" // Caminho da imagem
+        image: "images/poltrona-madri.jpg" 
     },
     {
         name: "Poltrona Bergamota",
         description: "Design exclusivo de Samuca.",
         specifications: "Parte da coleção 'Além da Superfície'.",
-        image: "poltrona-bergamota.jpg" // Caminho da imagem
+        image: "poltrona-bergamota.jpg" 
     }
     // Adicione mais produtos com imagens aqui
 ];
